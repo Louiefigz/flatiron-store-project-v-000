@@ -1,0 +1,16 @@
+current directory: /Users/aaronfigueroa/Development/rails/final_projects/flatiron-store-project-v-000/vendor/cache/ruby/2.2.0/gems/binding_of_caller-0.7.2/ext/binding_of_caller
+/Users/aaronfigueroa/.rvm/rubies/ruby-2.2.3/bin/ruby -r ./siteconf20160410-14346-6dduli.rb extconf.rb
+
+current directory: /Users/aaronfigueroa/Development/rails/final_projects/flatiron-store-project-v-000/vendor/cache/ruby/2.2.0/gems/binding_of_caller-0.7.2/ext/binding_of_caller
+make "DESTDIR=" clean
+make: *** No rule to make target `clean'.  Stop.
+
+current directory: /Users/aaronfigueroa/Development/rails/final_projects/flatiron-store-project-v-000/vendor/cache/ruby/2.2.0/gems/binding_of_caller-0.7.2/ext/binding_of_caller
+make "DESTDIR="
+echo "Nada."
+Nada.
+
+current directory: /Users/aaronfigueroa/Development/rails/final_projects/flatiron-store-project-v-000/vendor/cache/ruby/2.2.0/gems/binding_of_caller-0.7.2/ext/binding_of_caller
+make "DESTDIR=" install
+echo "Nada."
+Nada.

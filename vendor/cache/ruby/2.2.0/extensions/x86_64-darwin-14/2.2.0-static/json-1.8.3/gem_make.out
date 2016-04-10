@@ -1,0 +1,13 @@
+current directory: /Users/aaronfigueroa/Development/rails/final_projects/flatiron-store-project-v-000/vendor/cache/ruby/2.2.0/gems/json-1.8.3/ext/json
+/Users/aaronfigueroa/.rvm/rubies/ruby-2.2.3/bin/ruby -r ./siteconf20160410-14346-13jw512.rb extconf.rb
+creating Makefile
+
+current directory: /Users/aaronfigueroa/Development/rails/final_projects/flatiron-store-project-v-000/vendor/cache/ruby/2.2.0/gems/json-1.8.3/ext/json
+make "DESTDIR=" clean
+
+current directory: /Users/aaronfigueroa/Development/rails/final_projects/flatiron-store-project-v-000/vendor/cache/ruby/2.2.0/gems/json-1.8.3/ext/json
+make "DESTDIR="
+make: Nothing to be done for `all'.
+
+current directory: /Users/aaronfigueroa/Development/rails/final_projects/flatiron-store-project-v-000/vendor/cache/ruby/2.2.0/gems/json-1.8.3/ext/json
+make "DESTDIR=" install
