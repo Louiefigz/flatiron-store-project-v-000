@@ -10,7 +10,12 @@ class User < ActiveRecord::Base
   has_many :orders
   
 
-  def current_cart
+  def current_cart=(current_cart)
+    self.carts.unshift(current_cart)
+  end 
 
+  def current_cart 
+     
+    self.carts[0]
   end 
 end

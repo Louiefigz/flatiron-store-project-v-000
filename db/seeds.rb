@@ -14,3 +14,6 @@ Item.all.each do |item|
   counter += 1
 end
 
+
+
+
