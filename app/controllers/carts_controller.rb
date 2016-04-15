@@ -5,7 +5,7 @@ before_filter :set_cart, only: [:checkout]
    end
 
    def checkout
-    
+
        @cart.checkout
 
        current_user.current_cart = nil
@@ -16,7 +16,7 @@ before_filter :set_cart, only: [:checkout]
 
   private
   def set_cart
-    @cart = current_user.current_cart
+    @cart = Cart.find(params[:id])
     redirect_to store_path if @cart.nil?
   end
 
