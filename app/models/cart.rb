@@ -5,18 +5,6 @@ class Cart < ActiveRecord::Base
   belongs_to :user
 
 
-  # def add_item(item_id)
-  #   item = line_items.find_by(item_id: item_id)
-  #           # lineitem_(item_id: 19, cart_id: )
-  #   if item
-  #     item.quantity += 1
-  #   else
-  #     item = line_items.create(item_id: item_id)
-  #   end
-  #   item.save
-  #   item
-  # end
-
   # This would be similar to
 # cart.items.pluck(:id)
 
