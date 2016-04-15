@@ -7,4 +7,16 @@ class ApplicationController < ActionController::Base
     @cart ||= current_user.find_carts
   end
 
+  def initialize_cart
+    @cart = current_user.current_cart
+    if @cart.nil?
+      @cart = Cart.create
+      @cart.user = current_user
+      current_user.current_cart = @cart
+      current_user.save
+      @cart.save
+    end
+  end
+ 
+
 end

@@ -5,5 +5,13 @@ class Item < ActiveRecord::Base
   has_many :carts, through: :line_items
 
   def self.available_items
-  end 
+  
+    available = []
+    Item.all.each do |item|
+      if item.inventory > 0
+        available << item
+      end
+    end
+    available
+  end
 end
