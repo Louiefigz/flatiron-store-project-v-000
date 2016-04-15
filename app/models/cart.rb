@@ -3,8 +3,6 @@ class Cart < ActiveRecord::Base
   has_many :line_items
   has_many :items, through: :line_items
   belongs_to :user
-  belongs_to :orders
-  has_one :status, through: :orders
 
 
   def add_item(item_id)
@@ -27,6 +25,7 @@ class Cart < ActiveRecord::Base
   end
 
   def checkout
+    self.update(status: 'submitted')
     line_items.each do |li|
       li.item.inventory -= li.quantity
       li.item.save

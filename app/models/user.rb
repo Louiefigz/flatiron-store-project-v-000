@@ -10,18 +10,26 @@ class User < ActiveRecord::Base
   has_many :orders
 
   #  belongs_to :current_cart, class_name: "Cart"
-
-
-  def current_cart=(current_cart)
-    self.carts.unshift(current_cart)
+  def current_cart
+    carts.find_by(status: 'active')
   end
 
-  def current_cart
-
-    if !self.carts[0].nil?
-      self.carts[0]
+  def current_cart=(cart)
+    if !!cart
+      cart.update(status: 'active')
     end
   end
+  #
+  # def current_cart=(current_cart)
+  #   self.carts.unshift(current_cart)
+  # end
+  #
+  # def current_cart
+  #
+  #   if !self.carts[0].nil?
+  #     self.carts[0]
+  #   end
+  # end
 
   def find_carts
     if current_cart != nil
