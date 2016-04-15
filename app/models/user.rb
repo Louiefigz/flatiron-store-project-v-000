@@ -8,14 +8,27 @@ class User < ActiveRecord::Base
   has_many :line_items, through: :carts
   has_many :items, through: :line_items
   has_many :orders
-  
+
+  #  belongs_to :current_cart, class_name: "Cart"
+
 
   def current_cart=(current_cart)
     self.carts.unshift(current_cart)
-  end 
+  end
 
-  def current_cart 
-     
-    self.carts[0]
-  end 
+  def current_cart
+
+    if !self.carts[0].nil?
+      self.carts[0]
+    end
+  end
+
+  def find_carts
+    if current_cart != nil
+      current_cart
+    else
+      Cart.create(user_id: self.id )
+    end
+  end
+
 end
